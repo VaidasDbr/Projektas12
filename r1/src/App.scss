@@ -64,3 +64,78 @@
     }
   }
 }
+fieldset {
+  border: 2px dashed skyblue;
+  margin-top: 30px;
+  legend {
+    color: #87cfeba8;
+    font-size: 30px;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: skyblue;
+  color: #fff;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: skyblue;
+  color: #fff;
+  min-width: 200px;
+}
+label.checkbox {
+  line-height: 40px;
+  cursor: pointer;
+ &:before {
+  content: "\2610";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 40px;
+  margin-left: 20px;
+  color: gray;
+ }
+ &.checked {
+  &:before {
+    content: "\2611";
+    color: orangered;
+  }
+ }
+}
+label.radio {
+  line-height: 40px;
+  cursor: pointer;
+ &:before {
+  content: "\25CE";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 40px;
+  margin-left: 20px;
+  color: gray;
+ }
+ &.checked {
+  &:before {
+    content: "\25C9";
+    color: orangered;
+  }
+ }
+}

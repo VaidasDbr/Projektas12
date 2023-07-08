@@ -1,18 +1,26 @@
+import { useState } from 'react';
 import './App.scss';
-import Sq from "./Components/005/Sq.jsx";
-//import Counter from './Components/005/Counter';
+import Checkbox from './Components/006/Checkbox';
+import Fancy from './Components/006/Fancy';
+import Input from './Components/006/Input';
+import Input2 from './Components/006/Input2';
+import Radio from './Components/006/Radio';
+import Select from './Components/006/Select';
 import "./buttons.scss";
-//import Dogs4 from './Components/005/Dogs4';
-//import Dogs5 from './Components/005/Dogs5';
-
 function App() {
+  let [showRadio, setShowRadio] = useState(true);
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Dogs4/>
-        <Dogs5/> */}
-        {/* <Counter/> */}
-        <Sq />
+        <button className='red' onClick={_ => setShowRadio(!showRadio)}>Toggle Radio</button>
+        {
+          showRadio && <Radio />
+        }
+        <Checkbox />
+        <Select />
+        <Fancy />
+        <Input2 />
+        <Input />
       </header>
     </div>
   );
